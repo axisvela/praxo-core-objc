@@ -4,27 +4,23 @@ Dedicated repository for the Objective-C implementation of PRAXO-CORE: an
 embeddable, MIT-licensed agent execution kernel with policy controls,
 human-in-the-loop approval, checkpoints, events, and tool calling.
 
-- Package: `praxo-core-objc` (source build)
+- Package: `praxo-core-objc` (`0.1.1`)
+- Registry: Source
+- Install: `See README/SETUP.md`
 - Documentation: https://axisvela.github.io/praxo-core/languages/objc/
+- Mirror repository: https://github.com/axisvela/praxo-core-objc
 - Canonical source: https://github.com/axisvela/praxo-core/tree/main/language/objc
 - Release index: https://axisvela.github.io/praxo-core/languages/registry-status/
 
-This repository is a discovery mirror of the canonical Objective-C source. The
-monorepo remains the source of truth and the release workflow source. Shared
-conformance vectors are included under `spec/`.
-
-CocoaPods publication is pending. Windows GNUstep and macOS CI are recorded in
-the canonical repository.
-
-## Build
-
-Build from `language/objc` with the Objective-C compiler and GNUstep or Apple
-Foundation.
+This repository is a discovery mirror of the canonical Objective-C source.
+The monorepo remains the source of truth and the release workflow source. Shared
+conformance vectors are included under `spec/`, so the implementation can be
+built and tested here.
 
 ## Verify
 
-Build and test instructions are in `language/objc/README.md`. The monorepo CI
-runs the Objective-C conformance, API snapshot, and native tests.
+Build and test instructions are in `language/objc/README.md`. The
+monorepo CI runs the language's conformance, API snapshot, and native tests.
 
 PRAXO-CORE is not a hosted model, workflow engine, identity provider, or safety
 controller. Do not infer exactly-once execution, complete sandbox isolation,
