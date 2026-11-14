@@ -8,6 +8,7 @@ human-in-the-loop approval, checkpoints, events, and tool calling.
 - Registry: Source
 - Install: `See README/SETUP.md`
 - Documentation: https://axisvela.github.io/praxo-core/languages/objc/
+- Examples: https://github.com/axisvela/praxo-core-objc/tree/main/language/objc/examples
 - Mirror repository: https://github.com/axisvela/praxo-core-objc
 - Canonical source: https://github.com/axisvela/praxo-core/tree/main/language/objc
 - Release index: https://axisvela.github.io/praxo-core/languages/registry-status/
