@@ -1,6 +1,6 @@
 # PRAXO-CORE for Objective-C
 
-Objective-C is a native Core implementation with source tag `objc/v0.4.0`. It passes all eleven shared vector groups and includes the native agent loop, context compaction, memory store, path policy, checkpoint allowlist, tool selection, tool-call parsing, and opt-in PII redaction, structured output validation, and call limits. Vector coverage does not establish full Core parity or production readiness.
+Objective-C is a native Core implementation with source tag `objc/v0.5.0`. It passes all eleven shared vector groups and includes the native agent loop, context compaction, memory store, path policy, checkpoint allowlist, tool selection, tool-call parsing, and opt-in PII redaction, structured output validation, and call limits. Vector coverage does not establish full Core parity or production readiness.
 
 ## At a glance
 
@@ -9,9 +9,9 @@ Objective-C is a native Core implementation with source tag `objc/v0.4.0`. It pa
 | Package | `praxo-core-objc` |
 | Registry | Source |
 | Build | See README/SETUP.md |
-| Source version | `0.4.0` |
+| Source version | `0.5.0` |
 | Published version | not published |
-| Source tag | `objc/v0.4.0` |
+| Source tag | `objc/v0.5.0` |
 | Tier | Core |
 | Contract | `SPEC_VERSION` `0.2.0` |
 | Documentation | https://axisvela.github.io/praxo-core/languages/objc/ |
@@ -52,8 +52,10 @@ Runnable examples live under [`language/objc/examples`](language/objc/examples).
 | Example | What it shows |
 | --- | --- |
 | [checkpoint](language/objc/examples/checkpoint) | This example uses the Objective-C Core checkpoint allowlist for a registered payload round trip. |
+| [consumer](language/objc/examples/consumer) | This starter uses a deterministic model and an in-memory tool. It does not use the network or a model service. |
 | [event-sink](language/objc/examples/event-sink) | This example uses Objective-C Core sink composition to fan out events and filter the tool-only stream. |
 | [identity-policy](language/objc/examples/identity-policy) | This example binds a trusted principal to policy decisions and rejects missing, role-mismatched, and tenant-mismatched actions. |
+| [live-model](language/objc/examples/live-model) | This example connects the Objective-C Core to an OpenAI-compatible endpoint through `PXROpenAIModelCreate`, registers a `get_time(zone)` tool with a small JSON Schema, and restr... |
 | [mcp](language/objc/examples/mcp) | This example uses a caller-owned in-process transport with the Objective-C MCP client. |
 | [provider-fallback](language/objc/examples/provider-fallback) | This example calls a fallback only after the primary fails and preserves the primary failure when both fail. |
 | [retry](language/objc/examples/retry) | This example retries a transient failure with a bounded attempt count and keeps the exhausted failure state. |
