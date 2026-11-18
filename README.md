@@ -51,6 +51,7 @@ Runnable examples live under [`language/objc/examples`](language/objc/examples).
 
 | Example | What it shows |
 | --- | --- |
+| [advanced-delegation](language/objc/examples/advanced-delegation) | Application-level parent/child delegation plus six governance negative checks. |
 | [checkpoint](language/objc/examples/checkpoint) | This example uses the Objective-C Core checkpoint allowlist for a registered payload round trip. |
 | [consumer](language/objc/examples/consumer) | This starter uses a deterministic model and an in-memory tool. It does not use the network or a model service. |
 | [event-sink](language/objc/examples/event-sink) | This example uses Objective-C Core sink composition to fan out events and filter the tool-only stream. |
@@ -59,6 +60,7 @@ Runnable examples live under [`language/objc/examples`](language/objc/examples).
 | [live-model](language/objc/examples/live-model) | This example connects the Objective-C Core to an OpenAI-compatible endpoint through `PXROpenAIModelCreate`, registers a `get_time(zone)` tool with a small JSON Schema, and restr... |
 | [mcp](language/objc/examples/mcp) | This example uses a caller-owned in-process transport with the Objective-C MCP client. |
 | [provider-fallback](language/objc/examples/provider-fallback) | This example calls a fallback only after the primary fails and preserves the primary failure when both fail. |
+| [representative-chain](language/objc/examples/representative-chain) | Deterministic representative chain covering MCP record, final-argument authorization, governed child delegation, OTel/Harmovela events, and an edited denial with zero effects. |
 | [retry](language/objc/examples/retry) | This example retries a transient failure with a bounded attempt count and keeps the exhausted failure state. |
 | [service](language/objc/examples/service) | This example defines a transport-neutral request handler with health, principal, and run cases. |
 | [session-checkpoint](language/objc/examples/session-checkpoint) | This example saves and restores a conversation history across two agent turns. It uses `PXRSessionCreate`, `PXRAgentRun`, `PXRMessageWire`, and the checkpoint allowlist with a t... |
