@@ -12,6 +12,8 @@ Objective-C is a native Core implementation with source tag `objc/v0.7.0`. It pa
 | Source version | `0.7.0` |
 | Published version | not published |
 | Source tag | `objc/v0.7.0` |
+| Tutorial tag | `objc/tutorial/v0.1.0` |
+| Examples tag | `objc/examples/v0.1.0` |
 | Tier | Core |
 | Contract | `SPEC_VERSION` `0.2.0` |
 | Documentation | https://axisvela.github.io/praxo-core/languages/objc/ |
@@ -66,6 +68,18 @@ Runnable examples live under [`language/objc/examples`](language/objc/examples).
 | [session-checkpoint](language/objc/examples/session-checkpoint) | This example saves and restores a conversation history across two agent turns. It uses `PXRSessionCreate`, `PXRAgentRun`, `PXRMessageWire`, and the checkpoint allowlist with a t... |
 | [streaming](language/objc/examples/streaming) | This example accumulates streamed chunks and checks that they reconstruct the final output. |
 | [structured-output](language/objc/examples/structured-output) | This example validates a final JSON answer against a schema and rejects invalid output. |
+
+## Scenario Tutorials
+
+Scenario-oriented tutorials live under `language/objc/Tutorial`.
+
+| Path | What it shows |
+| --- | --- |
+| [Tutorial](language/objc/Tutorial) | - [Privacy Agent (PE-03)](privacy-agent/README.md): source Objective-C Core, fixed message-exposure classification and a review-only deletion request; no password handling, acco... |
+| [chronic-care](language/objc/Tutorial/chronic-care) | Summarizes a fixed wearable trend and drafts a review-only care alert. No dosage or individualized treatment change. |
+| [digital-twin-memory](language/objc/Tutorial/digital-twin-memory) | Recalls fixed consent-scoped memories with provenance, then deletes one scope. No real inbox, passwords or unrestricted recall. |
+| [dlp-redaction](language/objc/Tutorial/dlp-redaction) | Inspects a fixed export for sensitive fields and drafts a review-only redaction. No encryption, DLP completeness or sharing claim. |
+| [privacy-agent](language/objc/Tutorial/privacy-agent) | A bounded first slice of [PE-03](https://axisvela.github.io/praxo-core/getting-started/agent-scenarios/), not a password manager or data-deletion service. It classifies a fixed... |
 
 ## Verify
 
