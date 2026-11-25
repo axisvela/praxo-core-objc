@@ -9,9 +9,9 @@ Objective-C is a native Core implementation with source tag `objc/v0.7.0`. It pa
 | Package | `praxo-core-objc` |
 | Registry | Source |
 | Build | See README/SETUP.md |
-| Source version | `0.7.0` |
+| Source version | `0.8.0` |
 | Published version | not published |
-| Source tag | `objc/v0.7.0` |
+| Source tag | `objc/v0.8.0` |
 | Tier | Core |
 | Contract | `SPEC_VERSION` `0.2.0` |
 | Documentation | https://axisvela.github.io/praxo-core/languages/objc/ |
