@@ -1,6 +1,6 @@
 # PRAXO-CORE for Objective-C
 
-Objective-C is a native Core implementation with source tag `objc/v0.8.0`. It passes all eleven shared vector groups and includes the native agent loop, context compaction, memory store, path policy, checkpoint allowlist, tool selection, tool-call parsing, argument-aware policy, and opt-in PII redaction, structured output validation, call limits, and human-in-the-loop interrupts. Vector coverage does not establish full Core parity or production readiness.
+PRAXO-CORE (also written praxocore) is an embeddable, MIT-licensed agent framework. Objective-C is a native Core implementation with source tag `objc/v0.8.0`. It passes all eleven shared vector groups and includes the native agent loop, context compaction, memory store, path policy, checkpoint allowlist, tool selection, tool-call parsing, argument-aware policy, and opt-in PII redaction, structured output validation, call limits, and human-in-the-loop interrupts. Vector coverage does not establish full Core parity or production readiness.
 
 ## At a glance
 
@@ -58,13 +58,13 @@ Runnable examples live under [`language/objc/examples`](language/objc/examples).
 | [event-sink](language/objc/examples/event-sink) | This example uses Objective-C Core sink composition to fan out events and filter the tool-only stream. |
 | [hitl](language/objc/examples/hitl) | This example demonstrates a write tool that requires human approval: |
 | [identity-policy](language/objc/examples/identity-policy) | This example binds a trusted principal to policy decisions and rejects missing, role-mismatched, and tenant-mismatched actions. |
-| [live-model](language/objc/examples/live-model) | This example connects the Objective-C Core to an OpenAI-compatible endpoint through `PXROpenAIModelCreate`, registers a `get_time(zone)` tool with a small JSON Schema, and restr... |
+| [live-model](language/objc/examples/live-model) | This example connects the Objective-C Core to an OpenAI-compatible endpoint through `PXROpenAIModelCreate`, registers a `get_time(zone)` tool with a small JSON Schema, and restricts the run to `get_time`. |
 | [mcp](language/objc/examples/mcp) | This example uses a caller-owned in-process transport with the Objective-C MCP client. |
 | [provider-fallback](language/objc/examples/provider-fallback) | This example calls a fallback only after the primary fails and preserves the primary failure when both fail. |
 | [representative-chain](language/objc/examples/representative-chain) | Deterministic representative chain covering MCP record, final-argument authorization, governed child delegation, OTel/Harmovela events, and an edited denial with zero effects. |
 | [retry](language/objc/examples/retry) | This example retries a transient failure with a bounded attempt count and keeps the exhausted failure state. |
 | [service](language/objc/examples/service) | This example defines a transport-neutral request handler with health, principal, and run cases. |
-| [session-checkpoint](language/objc/examples/session-checkpoint) | This example saves and restores a conversation history across two agent turns. It uses `PXRSessionCreate`, `PXRAgentRun`, `PXRMessageWire`, and the checkpoint allowlist with a t... |
+| [session-checkpoint](language/objc/examples/session-checkpoint) | This example saves and restores a conversation history across two agent turns. It uses `PXRSessionCreate`, `PXRAgentRun`, `PXRMessageWire`, and the checkpoint allowlist with a teaching in-memory store keyed by session id. |
 | [streaming](language/objc/examples/streaming) | This example accumulates streamed chunks and checks that they reconstruct the final output. |
 | [structured-output](language/objc/examples/structured-output) | This example validates a final JSON answer against a schema and rejects invalid output. |
 
@@ -95,6 +95,11 @@ python language/objc/run-tests.py
 
 This mirror contains the language source and the shared `spec/` vectors, so the implementation can be built and tested here. See [`language/objc/README.md`](language/objc/README.md) for the exact commands. The monorepo CI runs conformance, API snapshot, and native tests for this implementation.
 
+## Boundaries
+
+Reference application source is not end-to-end portfolio acceptance; follow each README's scope and evidence.
+PRAXO-CORE is not a hosted model, workflow engine, identity provider, or safety controller. Do not infer exactly-once execution, complete sandbox isolation, production security certification, live-provider behavior, or physical safety from this package.
+
 ## Community
 
 - X: <https://x.com/axisvela>
@@ -124,6 +129,5 @@ This mirror contains the language source and the shared `spec/` vectors, so the 
 
 This repository is a discovery mirror of the canonical Objective-C source. The monorepo remains the source of truth and the release workflow source. The mirror's `main` branch tracks current source, not a release snapshot. Source tags refer to the canonical monorepo and are not necessarily present in this mirror; syncing the branch does not publish mirror tags or registry packages.
 
-PRAXO-CORE is not a hosted model, workflow engine, identity provider, or safety controller. Do not infer exactly-once execution, complete sandbox isolation, production security certification, live-provider behavior, or physical safety from this package.
 
 MIT licensed.
